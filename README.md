@@ -5,6 +5,8 @@
 * La Organización de Aviación Civil Internacional (OACI), organismo de la Organización de las Naciones Unidas, quiere investigar en profundidad los accidentes producidos desde inicios del siglo XX. Para ello, el objetivo principal es poder obtener un análisis de datos relacionado a esto, junto a un dashboard que complemente los análisis con sus visualizaciones.
 ## Con el archivo.csv de la Organización de Aviación Civil Internacional (OACI). Se realizo lo siguiente:
 
+![101](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/8ad18c65-7423-4d0c-b4b5-ef2f7895901b)
+
 
 #### Preprocesamiento de Datos.
 1. *Limpieza de Datos:* Identificar y tratar valores faltantes, duplicados o incorrectos en el conjunto de datos.
@@ -16,6 +18,7 @@
 4. *Manejo de Valores Atípicos:* Identificar y decidir cómo manejar valores atípicos que pueden afectar el análisis.
 
 5. *Tratamiento de Datos Desbalanceados:* Si los datos están desequilibrados en términos de clases o categorías, se pueden aplicar técnicas para abordar este desequilibrio.
+
 ### ETL.
 #### Imporatcion de Librerias.
 #### Lectura de Archivo csv. para:
@@ -31,6 +34,9 @@
 * Analizamos los distintos tipos de datos por columna.
 * Eliminación de Columnas inecesarias.
 * Vemos como queda Dimensionado.
+
+![102columnas](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/d20b7f3c-374e-4b26-bb1a-09b7b28215c8)
+
 #### Modificando Columnas.
 ##### 01-Columna Date. (Fecha del accidente).
 * Observamos los datos Unicos de la columna date.
@@ -150,6 +156,8 @@
 *  Extremos u outliers.
 *  Registros duplicados.
 *  La utilización de gráficos coherentes según la tipología de variable que corresponda.
+  
+![103eda](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/144dcefc-ef9b-4eda-bbc2-a4089d7bd122)
 
 #### Importación de librerías.
 #### Importacion de mi variable que contiene mi dataframe con el ETL.
@@ -173,6 +181,9 @@
 #### Histogramas.
 * Reaizamos un Histograma con las siguientes columnas: total_aboard,passengers_aboard,crew_aboard,total_fatalities,passengers_fatalities,crew_fatalities,survivors.
   * Todas las distribuciones presentan un gran sesgo a la derecha.
+
+![histoGram1](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/f71033fc-bd9c-4b87-b52a-ac5b91f75d6a)
+
 #### Outliers.
 * Graficamos las siguientes variables que podemos utilizar (ya que no tienen valores nulos).
 * Filtramos outliers de crew_aboard.
@@ -180,12 +191,18 @@
 * Filtramos outliers de crew_fatalities.
 * Criterio de selección crew_fatalities.
 * Criterio de selección, si crew_aboard > crew.fatalities.
+  
+![outliers1](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/1b1e4ddd-11d6-4fb2-b09e-8f81bc297072)
+
 #### Gráficos de barras.
 ### Metricas.
 #### ¿Cuántos accidentes estamos analizando?
 * la cantidad de accidentes analizada en el dataframe es de: 4770.
 * Observando la dimencion del dataframe.
   * Tenemos 4770 filas y 23 columnas, para trabajar.
+
+![barras1](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/3425bec8-1093-4a2f-afa3-4c3c9f00196d)
+
 #### ¿Cuál es el país con mayor cantidad de accidentes?
 * Filtramos los datos para excluir la categoría other de country.
 * Observamos los valores en una tabla.
@@ -206,6 +223,10 @@
   * Observamos que los vuelos no militares poseen mayor cantidad de accidentes a lo largo de la historia.
 #### Análisis temporal.
 * Accidentes a lo largo de los años.
+
+![lineal1](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/e62663f4-c0b6-4c1c-9395-a2be95eeee85)
+
+
 #### Primer y último vuelo del dataset.
 * Vuelo más antiguo:
   * Número de vuelo: 
@@ -235,9 +256,18 @@
 Evaluar la disminución de un 10% la tasa de fatalidad de la tripulación en los últimos 10 años, comparado a la década anterior.
 * Definimos la tasa de fatalidad de la tripulación como el número total de tripulantes fallecidos en los accidentes registrados en la década a considerar, dividido en la cantidad total de accidentes aéreos ocurridos en este período de tiempo.
 * Su fórmula es (Suma total de fallecidos en el período de tiempo / Suma total de accidentes en el período de tiempo).
+
+![104KPIS](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/30224fe9-de1d-45e4-8508-b14d07a6eb4c)
+
 #### KPI.
 #### Tasa de Sobrevivencia por decada.
 
 ### Conexion a MySQL.
+
+![bd_1](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/9610ac0b-0767-4cb1-8e41-788b439da1a7)
+
 ### DashBoard.
+
+![pwbi_1](https://github.com/ingjuanrps/proyecto_Individual02/assets/114045466/76cb63ab-2822-444f-80fd-3d89b2e64bdc)
+
 
